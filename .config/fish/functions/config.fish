@@ -1,4 +1,4 @@
-function config --wraps='/usr/bin/git --git-dir=/Users/james.sharpe/dotfiles/ --work-dir=/Users/james.sharpe' --wraps='/usr/bin/git --git-dir=/Users/james.sharpe/dotfiles/ --work-tree=/Users/james.sharpe' --description 'alias config=/usr/bin/git --git-dir=/Users/james.sharpe/dotfiles/ --work-tree=/Users/james.sharpe'
-  /usr/bin/git --git-dir=/Users/james.sharpe/dotfiles/ --work-tree=/Users/james.sharpe $argv
+function config --wraps='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-dir=$HOME' --wraps='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' --description 'alias config=/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+  /usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME $argv
         
 end
