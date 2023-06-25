@@ -2,11 +2,25 @@
 [user]
 # Please adapt and uncomment the following lines:
 	name = James Sharpe
-	email = james.sharpe@zenotech.com
+	email = james.sharpe@zenotech.com 
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICcDHPR1BkGR/DmxyJ8JafLgLuV7KJcAUUXzvkpdvN/i
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
+[core]
+	fsmonitor = true
+	untrackedCache = true
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 [push]
-	autoSetupRemote = true
+       autoSetupRemote = true
