@@ -15,7 +15,7 @@
 [commit]
 	gpgsign = true
 [core]
-	fsmonitor = true
+	fsmonitor = false
 	untrackedCache = true
 [filter "lfs"]
 	process = git-lfs filter-process
