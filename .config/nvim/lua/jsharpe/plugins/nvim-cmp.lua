@@ -2,6 +2,7 @@ return {
 	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
 	dependencies = {
+		"alexander-born/cmp-bazel",
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
 		"onsails/lspkind.nvim",
@@ -19,9 +20,9 @@ return {
 		require("luasnip.loaders.from_vscode").lazy_load()
 
 		cmp.setup({
-            completion = {
-                completeopt = "menu,menuone,preview,noselect",
-            },
+			completion = {
+				completeopt = "menu,menuone,preview,noselect",
+			},
 			snippet = {
 				expand = function(args)
 					luasnip.lsp_expand(args.body)
@@ -39,6 +40,7 @@ return {
 
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
+				{ name = "bazel" },
 				{ name = "luasnip" },
 				{ name = "buffer" },
 				{ name = "path" },

@@ -1,2 +1,2 @@
-require('jsharpe.core')
-require('jsharpe.lazy')
+require("jsharpe.core")
+require("jsharpe.lazy")
