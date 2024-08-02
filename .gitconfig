@@ -11,16 +11,16 @@
 [gpg]
 	format = ssh
 [gpg "ssh"]
-	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+#	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [commit]
-	gpgsign = true
+	gpgsign = false
 [core]
 	fsmonitor = false
 	untrackedCache = true
+[push]
+       autoSetupRemote = true
 [filter "lfs"]
+	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-[push]
-       autoSetupRemote = true
