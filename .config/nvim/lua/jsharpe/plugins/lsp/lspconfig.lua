@@ -83,7 +83,7 @@ return {
 		})
 
 		-- configure typescript server with plugin
-		lspconfig["tsserver"].setup({
+		lspconfig["ts_ls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
@@ -130,6 +130,16 @@ return {
 		lspconfig["pyright"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+		})
+
+		lspconfig["ruff"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+			init_options = {
+				settings = {
+					-- Ruff language server settings go here
+				},
+			},
 		})
 
 		-- configure lua server (with special settings)
