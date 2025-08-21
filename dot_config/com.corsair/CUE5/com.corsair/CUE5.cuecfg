@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<map name="Backup">
+		<value name="Version">5.7.106</value>
+	</map>
+	<map name="CommonSettings">
+		<value name="ClinkICUERestartRequested">false</value>
+		<value name="DemoDeviceModeEnabled">false</value>
+		<binary name="IntegrationsClientsAccessExplicitDecisionPerformed">%00%00%00%0B%00%00%00%00%00</binary>
+		<value name="ShowLastPackagesOperationResultNotification">false</value>
+	</map>
+	<map name="DataCollectionSettings">
+		<value name="configuration_loaded_date">2024-11-28T01:00:26.466</value>
+		<value name="dataConsent">true</value>
+		<map name="hwProfilesHashes">
+			<map name="{ca1cc09b-b1f1-4c86-ace9-2850adfd9ccf}">
+				<value name="{1b4c0000-0010-0000-0000-000000000000}">5d27fce82fc2c630c3aff0644fcafe6a</value>
+				<value name="{1b4c0000-0020-0000-0000-000000000000}">8b9f0ce5eb038327ad657a14a116446d</value>
+				<value name="{1b4c0000-0030-0000-0000-000000000000}">3503e1c3a0c166b0b254ce3feb885cc5</value>
+			</map>
+		</map>
+		<value name="iCueSettingsEventHash">bd139652236b57763cfe9b028085fcc7</value>
+		<value name="iCueSettingsEventSent">false</value>
+		<value name="inited">true</value>
+		<value name="initialProfilesSent">true</value>
+		<value name="machine_id">f0fe86735f6b1cdeaa7c71497cc66744</value>
+		<value name="muralsStatisticsEventHash">d87cbdd8aa1248e9326e6e69ef1031d2</value>
+		<value name="previous_close_timestamp">1695369734746</value>
+		<value name="session_ended">false</value>
+		<value name="total_icue_starts">9</value>
+		<value name="user_id">00183499e3362c5cfeaad01c9ed407bb999b8d3ddd66027c022ac89ef8f8da32</value>
+	</map>
+	<map name="DeviceListWatcher">
+		<value name="device_list_saved_correctly">false</value>
+	</map>
+	<map name="Devices">
+		<map name="IRONCLAW RGB WIRELESS">
+			<map name="{ca1cc09b-b1f1-4c86-ace9-2850adfd9ccf}">
+				<value name="ActiveHardwareProfileIndex">0</value>
+				<value name="AngleSnappingAngle">0</value>
+				<value name="AngleSnappingEnabled">false</value>
+				<value name="BodyColor">0</value>
+				<value name="BrightnessLevel">100</value>
+				<value name="FirstDetected">2023-06-20T08:28:49.371Z</value>
+				<value name="Layout">1</value>
+				<binary name="LedChannelCounts">%00%01%00%00%00%00%00%00%0BQList%3Cint%3E%00%00%00%00%00</binary>
+				<binary name="LedChannelExtensionsTypes">%00%01%00%00%00%00%00%001QList%3CQList%3Ccue%3A%3Adev%3A%3Amanifest%3A%3ALedChannelType%3E%3E%00%00%00%00%01%00%00%00%00</binary>
+				<binary name="LedChannelSynchronizations">%00%01%00%00%00%00%00%00%0CQList%3Cbool%3E%00%00%00%00%00</binary>
+				<binary name="LedChannelTypeCombinations">%00%01%00%00%00%00%00%001QList%3CQList%3Ccue%3A%3Adev%3A%3Amanifest%3A%3ALedChannelType%3E%3E%00%00%00%00%00</binary>
+				<binary name="LedChannelTypes">%00%01%00%00%00%00%00%00%2AQList%3Ccue%3A%3Adev%3A%3Amanifest%3A%3ALedChannelType%3E%00%00%00%00%01%00%00%00%0CNotConnected</binary>
+				<value name="LightingMode">Software</value>
+				<value name="PowerSaveModeEnabled">false</value>
+				<value name="SleepModeEnabled">true</value>
+				<value name="SleepModeWaitDelaySec">900</value>
+				<value name="TaskbarBatteryIconEnabled">false</value>
+				<value name="UniqueDeviceId">{aa7d93d0-16a6-4f22-84a4-05bf18225387}</value>
+				<value name="UniqueDongleId">{606fd80f-e599-4ce9-9040-647b87a8f712}</value>
+			</map>
+		</map>
+		<map name="IRONCLAW RGB WIRELESS DONGLE">
+			<map name="{f2a155f8-2a2e-4813-a8d5-3fb0f0778f63}">
+				<value name="BodyColor">0</value>
+				<value name="FirstDetected">2023-06-20T08:28:49.266Z</value>
+				<value name="Layout">1</value>
+				<binary name="LedChannelCounts">%00%01%00%00%00%00%00%00%0BQList%3Cint%3E%00%00%00%00%00</binary>
+				<binary name="LedChannelExtensionsTypes">%00%01%00%00%00%00%00%001QList%3CQList%3Ccue%3A%3Adev%3A%3Amanifest%3A%3ALedChannelType%3E%3E%00%00%00%00%01%00%00%00%00</binary>
+				<binary name="LedChannelSynchronizations">%00%01%00%00%00%00%00%00%0CQList%3Cbool%3E%00%00%00%00%00</binary>
+				<binary name="LedChannelTypeCombinations">%00%01%00%00%00%00%00%001QList%3CQList%3Ccue%3A%3Adev%3A%3Amanifest%3A%3ALedChannelType%3E%3E%00%00%00%00%00</binary>
+				<binary name="LedChannelTypes">%00%01%00%00%00%00%00%00%2AQList%3Ccue%3A%3Adev%3A%3Amanifest%3A%3ALedChannelType%3E%00%00%00%00%01%00%00%00%0CNotConnected</binary>
+				<value name="LightingMode">Software</value>
+				<value name="UniqueDeviceId">{020e23e9-d71c-4cb4-87ec-f41afe98fa53}</value>
+			</map>
+		</map>
+		<binary name="UniqueDeviceIds">%00%01%00%00%00%00%00%005QHash%3CQUuid%2CUniqueDeviceIdStorage%3A%3AUniqueDeviceData%3E%00%00%00%00%02%CA%1C%C0%9B%B1%F1L%86%AC%E9%28P%AD%FD%9C%CF%00%00%1B%1C%00%00%1BL%00%00%00%20%00A%002%000%00E%005%00C%002%002%006%00B%00B%001%00A%008%00C%00A%00%00%00%08%F5%D6%EB%7C%05X%B6E%F2%A1U%F8%2A.H%13%A8%D5%3F%B0%F0w%8Fc%00%00%1B%1C%00%00%1Bf%00%00%00%20%00C%008%00D%002%005%008%003%002%00D%004%00F%006%006%004%007%006%00%00%00%08%F5%D6%EB%7C%05X%B6E</binary>
+	</map>
+	<map name="HWPInfoPopup">
+		<value name="InfoPopupVisible">false</value>
+	</map>
+	<value name="Language">en</value>
+	<value name="LastDataCollectionConsentAppVersion">5.10.82</value>
+	<value name="LastLoadedAppVersion">5.20.89</value>
+	<map name="LightingLibraryStorage">
+		<value name="version">401</value>
+	</map>
+	<map name="Lightings">
+		<map name="Instant">
+			<value name="Enabled">false</value>
+		</map>
+	</map>
+	<map name="Privacy">
+		<value name="DataCollectionConsent">true</value>
+		<value name="DataCollectionConsentTimestamp">01 Jul 2024 15:22:56 +0100</value>
+	</map>
+	<map name="Profiles">
+		<binary name="StoredToDevice">%00%00%00%09%00%00%00%00%03%00%00%00%1E%00%1BL%00%00%00%10%00%00%00%00%00%00%00%00%00%00%00%00%00%1E%00%1BL%00%00%00%20%00%00%00%00%00%00%00%00%00%00%00%00%00%1E%00%1BL%00%00%000%00%00%00%00%00%00%00%00%00%00</binary>
+	</map>
+	<map name="Storage Locations">
+		<value name="-Users-james.sharpe-Library-Application Support-Corsair-CUE5-dpi-dpi.cuelibrary">true</value>
+		<value name="-Users-james.sharpe-Library-Application Support-Corsair-CUE5-dpi-hwdpi.cuelibrary">true</value>
+		<value name="-Users-james.sharpe-Library-Application Support-Corsair-CUE5-eq_presets-limitedequalizerpresets.cuelibrary">true</value>
+		<value name="-Users-james.sharpe-Library-Application Support-Corsair-CUE5-eq_presets-unlimitedequalizerpresets.cuelibrary">true</value>
+		<value name="-Users-james.sharpe-Library-Application Support-Corsair-CUE5-eq_presets-unlimitedv2equalizerpresets.cuelibrary">true</value>
+		<value name="-Users-james.sharpe-Library-Application Support-Corsair-CUE5-eq_presets-unlimitedv3equalizerpresets.cuelibrary">true</value>
+		<value name="-Users-james.sharpe-Library-Application Support-Corsair-CUE5-quicklightingzones-quickLightingZones">true</value>
+		<value name="-Users-james.sharpe-Library-Application Support-Corsair-CUE5-sensors-UserProps">true</value>
+	</map>
+	<map name="SwUpdate">
+		<value name="LastCheckDate">2024-12-08</value>
+	</map>
+	<map name="Update">
+		<value name="PrevUpdateTime">2024-11-28T01:00:25.960Z</value>
+		<value name="UpdateCount">16</value>
+		<value name="UpdateEndTime">2024-11-28T01:00:25.975Z</value>
+	</map>
+	<value name="defaultProfile">{6cd71b5b-3931-40b3-b349-10604b36d69e}</value>
+</config>
