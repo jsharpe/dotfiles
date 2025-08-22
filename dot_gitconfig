@@ -1,0 +1,83 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = James Sharpe
+	email = james.sharpe@zenotech.com 
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICcDHPR1BkGR/DmxyJ8JafLgLuV7KJcAUUXzvkpdvN/i
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
+[gpg]
+	format = ssh
+[gpg "ssh"]
+#	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = false
+[core]
+	fsmonitor = false
+	untrackedCache = true
+[push]
+       autoSetupRemote = true
+[pack]
+	usePathWalk = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[credential]
+	helper = "!f() { /home/vscode/.vscode-server/bin/4949701c880d4bdb949e3c0e6b400288da7f474b/node /tmp/vscode-remote-containers-77aad728-9b36-4551-bb0a-461559eda889.js git-credential-helper $*; }; f"
+[safe]
+	directory = /workspaces/zCFD
+
+# Configuration from https://blog.gitbutler.com/how-git-core-devs-configure-git
+
+[column]
+        ui = auto
+[branch]
+        sort = -committerdate
+[tag]
+        sort = version:refname
+[init]
+        defaultBranch = main
+[diff]
+        algorithm = histogram
+        colorMoved = plain
+        mnemonicPrefix = true
+        renames = true
+[push]
+        default = simple
+        autoSetupRemote = true
+        followTags = true
+[fetch]
+        prune = true
+        pruneTags = true
+        all = true
+
+# why the hell not?
+
+[help]
+        autocorrect = prompt
+[commit]
+        verbose = true
+[rerere]
+        enabled = true
+        autoupdate = true
+[core]
+        excludesfile = ~/.gitignore
+[rebase]
+        autoSquash = true
+        autoStash = true
+        updateRefs = true
+
+# a matter of taste (uncomment if you dare)
+
+[core]
+        # fsmonitor = true
+        # untrackedCache = true
+[merge]
+        # (just 'diff3' if git version < 2.3)
+        # conflictstyle = zdiff3
+[pull]
+        # rebase = true
