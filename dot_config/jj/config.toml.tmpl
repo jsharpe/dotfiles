@@ -1,0 +1,35 @@
+#:schema https://jj-vcs.github.io/jj/latest/config-schema.json
+
+[user]
+name = "James Sharpe"
+email = "james.sharpe@datadoghq.com"
+
+[signing]
+behavior = "own"
+backend = "ssh"
+key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKXdb/MroJXv6A/8cxL2qZh4WLsPzst2nO//qVPBea7+"
+
+[git]
+{{- if eq .chezmoi.os "darwin" }}
+executable-path = "/opt/homebrew/bin/git"
+{{- else }}
+executable-path = "/usr/bin/git"
+{{- end }}
+auto-local-bookmark = false
+private-commits = 'description(glob:"wip:*") | description(glob:"private:*")'
+push-branch-prefix = "james.sharpe/"
+
+[snapshot]
+max-new-file-size = "14MiB"
+
+[ui]
+paginate = "auto"
+log-word-wrap = true
+
+[revset-aliases]
+"pr_head()" = "heads(trunk()..@ & tracked_remote_bookmarks())"
+"pr_base()" = "coalesce(heads(trunk()..pr_head()- & tracked_remote_bookmarks()), trunk())"
+
+[aliases]
+l = ["log", "-r", "(main..@):: | (main..@)-"]
+st = ["status"]
