@@ -1,0 +1,2 @@
+common --watchfs
+common --announce_rc

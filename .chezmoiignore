@@ -1,0 +1,26 @@
+# Ignore work-specific configurations
+.aws/
+.claude/
+.global_hooks/
+.vault
+
+# Ignore system-specific directories
+.cache/
+.docker/
+.gnupg/
+.password-store/
+.ssh/id_*
+.ssh/known_hosts
+
+# Ignore history files
+.bash_history
+.zsh_history
+.lesshst
+.python_history
+.viminfo
+
+# Ignore build artifacts and cache
+.cargo/.crates*
+.cargo/.package-cache*
+.cargo/.global-cache
+.zcompdump*
