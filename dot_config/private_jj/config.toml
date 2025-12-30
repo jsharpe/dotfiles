@@ -1,9 +1,0 @@
-[user]
-name = "James Sharpe"
-email = "james.sharpe@zenotech.com"
-
-[core]
-fsmonitor = "watchman"
-
-[core.watchman]
-register_snapshot_trigger = true
