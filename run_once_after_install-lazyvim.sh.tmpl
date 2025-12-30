@@ -1,0 +1,36 @@
+#!/bin/bash
+
+set -e
+
+echo "==> Setting up LazyVim..."
+
+# Backup existing neovim config if it exists
+if [ -d "$HOME/.config/nvim" ]; then
+    echo "==> Backing up existing nvim config..."
+    mv "$HOME/.config/nvim" "$HOME/.config/nvim.bak.$(date +%Y%m%d%H%M%S)"
+fi
+
+if [ -d "$HOME/.local/share/nvim" ]; then
+    echo "==> Backing up existing nvim data..."
+    mv "$HOME/.local/share/nvim" "$HOME/.local/share/nvim.bak.$(date +%Y%m%d%H%M%S)"
+fi
+
+if [ -d "$HOME/.local/state/nvim" ]; then
+    echo "==> Backing up existing nvim state..."
+    mv "$HOME/.local/state/nvim" "$HOME/.local/state/nvim.bak.$(date +%Y%m%d%H%M%S)"
+fi
+
+if [ -d "$HOME/.cache/nvim" ]; then
+    echo "==> Backing up existing nvim cache..."
+    mv "$HOME/.cache/nvim" "$HOME/.cache/nvim.bak.$(date +%Y%m%d%H%M%S)"
+fi
+
+# Clone LazyVim starter
+echo "==> Cloning LazyVim starter configuration..."
+git clone https://github.com/LazyVim/starter "$HOME/.config/nvim"
+
+# Remove .git directory from starter to allow customization
+rm -rf "$HOME/.config/nvim/.git"
+
+echo "==> LazyVim setup complete!"
+echo "==> Run 'nvim' to start LazyVim and install plugins"

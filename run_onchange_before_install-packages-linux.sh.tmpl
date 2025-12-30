@@ -36,4 +36,16 @@ else
     echo "==> jj is already installed ($(jj --version))"
 fi
 
+# Install neovim
+if ! command -v nvim &> /dev/null; then
+    echo "==> Installing neovim..."
+    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+    sudo rm -rf /opt/nvim
+    sudo tar -C /opt -xzf nvim-linux64.tar.gz
+    rm nvim-linux64.tar.gz
+    sudo ln -sf /opt/nvim-linux64/bin/nvim /usr/local/bin/nvim
+else
+    echo "==> neovim is already installed ($(nvim --version | head -n1))"
+fi
+
 echo "==> Linux package installation complete!"
