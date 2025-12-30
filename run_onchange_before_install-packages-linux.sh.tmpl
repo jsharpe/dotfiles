@@ -25,6 +25,14 @@ else
     echo "==> fzf is already installed ($(fzf --version))"
 fi
 
+# Install zoxide
+if ! command -v zoxide &> /dev/null; then
+    echo "==> Installing zoxide..."
+    curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+else
+    echo "==> zoxide is already installed ($(zoxide --version))"
+fi
+
 # Install starship
 if ! command -v starship &> /dev/null; then
     echo "==> Installing starship..."

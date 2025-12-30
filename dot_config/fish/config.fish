@@ -4,6 +4,10 @@ if test (uname) = Darwin
     eval (/opt/homebrew/bin/brew shellenv)
 end
 
+# Add local bin directories to PATH
+fish_add_path -m $HOME/.local/bin
+fish_add_path -m $HOME/.fzf/bin
+
 # Set up fzf key bindings
 fzf --fish | source
 
