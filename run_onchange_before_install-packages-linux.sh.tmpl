@@ -11,6 +11,23 @@ if ! command -v cargo &> /dev/null; then
     source "$HOME/.cargo/env"
 fi
 
+# Install fzf
+if ! command -v fzf &> /dev/null; then
+    echo "==> Installing fzf..."
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install --all --no-bash --no-zsh
+else
+    echo "==> fzf is already installed ($(fzf --version))"
+fi
+
+# Install starship
+if ! command -v starship &> /dev/null; then
+    echo "==> Installing starship..."
+    curl -sS https://starship.rs/install.sh | sh -s -- -y
+else
+    echo "==> starship is already installed ($(starship --version))"
+fi
+
 # Install jj (Jujutsu VCS)
 if ! command -v jj &> /dev/null; then
     echo "==> Installing jj (Jujutsu VCS) via cargo..."

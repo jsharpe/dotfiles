@@ -1,6 +1,8 @@
 # ~/.config/fish/config.fish
 
-eval (/opt/homebrew/bin/brew shellenv)
+if test (uname) = Darwin
+    eval (/opt/homebrew/bin/brew shellenv)
+end
 
 # Set up fzf key bindings
 fzf --fish | source
