@@ -14,8 +14,13 @@ fi
 # Install fzf
 if ! command -v fzf &> /dev/null; then
     echo "==> Installing fzf..."
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install --all --no-bash --no-zsh
+    if [ -d ~/.fzf ]; then
+        echo "==> fzf directory exists, running installer..."
+        ~/.fzf/install --bin --key-bindings --completion --no-update-rc
+    else
+        git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+        ~/.fzf/install --bin --key-bindings --completion --no-update-rc
+    fi
 else
     echo "==> fzf is already installed ($(fzf --version))"
 fi
@@ -39,11 +44,24 @@ fi
 # Install neovim
 if ! command -v nvim &> /dev/null; then
     echo "==> Installing neovim..."
-    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-    sudo rm -rf /opt/nvim
-    sudo tar -C /opt -xzf nvim-linux64.tar.gz
-    rm nvim-linux64.tar.gz
-    sudo ln -sf /opt/nvim-linux64/bin/nvim /usr/local/bin/nvim
+    ARCH=$(uname -m)
+    if [ "$ARCH" = "x86_64" ]; then
+        NVIM_ARCH="x86_64"
+    elif [ "$ARCH" = "aarch64" ] || [ "$ARCH" = "arm64" ]; then
+        NVIM_ARCH="arm64"
+    else
+        echo "==> Unsupported architecture: $ARCH"
+        exit 1
+    fi
+
+    NVIM_FILE="nvim-linux-${NVIM_ARCH}.tar.gz"
+    NVIM_DIR="nvim-linux-${NVIM_ARCH}"
+    rm -f "$NVIM_FILE"
+    curl -fLO "https://github.com/neovim/neovim/releases/latest/download/${NVIM_FILE}"
+    sudo rm -rf "/opt/${NVIM_DIR}"
+    sudo tar -C /opt -xzf "$NVIM_FILE"
+    rm "$NVIM_FILE"
+    sudo ln -sf "/opt/${NVIM_DIR}/bin/nvim" /usr/local/bin/nvim
 else
     echo "==> neovim is already installed ($(nvim --version | head -n1))"
 fi
