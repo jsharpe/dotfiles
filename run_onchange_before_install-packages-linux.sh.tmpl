@@ -86,4 +86,69 @@ else
     echo "==> gh is already installed ($(gh --version | head -n1))"
 fi
 
+# Install bat
+if ! command -v bat &> /dev/null; then
+    echo "==> Installing bat..."
+    cargo install --locked bat
+else
+    echo "==> bat is already installed ($(bat --version))"
+fi
+
+# Install eza
+if ! command -v eza &> /dev/null; then
+    echo "==> Installing eza..."
+    cargo install --locked eza
+else
+    echo "==> eza is already installed ($(eza --version | head -n1))"
+fi
+
+# Install ripgrep
+if ! command -v rg &> /dev/null; then
+    echo "==> Installing ripgrep..."
+    cargo install --locked ripgrep
+else
+    echo "==> ripgrep is already installed ($(rg --version | head -n1))"
+fi
+
+# Install fd
+if ! command -v fd &> /dev/null; then
+    echo "==> Installing fd..."
+    cargo install --locked fd-find
+else
+    echo "==> fd is already installed ($(fd --version))"
+fi
+
+# Install jq
+if ! command -v jq &> /dev/null; then
+    echo "==> Installing jq..."
+    sudo apt update
+    sudo apt install jq -y
+else
+    echo "==> jq is already installed ($(jq --version))"
+fi
+
+# Install tokei
+if ! command -v tokei &> /dev/null; then
+    echo "==> Installing tokei..."
+    cargo install --locked tokei
+else
+    echo "==> tokei is already installed ($(tokei --version))"
+fi
+
+# Install duf
+if ! command -v duf &> /dev/null; then
+    echo "==> Installing duf..."
+    cargo install --locked duf
+else
+    echo "==> duf is already installed ($(duf --version | head -n1))"
+fi
+
+# Install dust
+if ! command -v dust &> /dev/null; then
+    echo "==> Installing dust..."
+    cargo install --locked du-dust
+else
+    echo "==> dust is already installed ($(dust --version))"
+fi
+
 echo "==> Linux package installation complete!"

@@ -16,3 +16,7 @@ zoxide init fish | source
 starship init fish | source
 
 set -gx PATH $PATH $HOME/.krew/bin
+
+# Aliases
+alias cat="bat"
+alias ls="eza"
