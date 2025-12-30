@@ -16,5 +16,5 @@
   lg2 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [user]
   name = James Sharpe
-  email = james.sharpe@zenotech.com
+  email = james.sharpe@datadoghq.com
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICcDHPR1BkGR/DmxyJ8JafLgLuV7KJcAUUXzvkpdvN/i
