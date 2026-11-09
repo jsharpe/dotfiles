@@ -1,5 +1,8 @@
-if test "$SSH_AUTH_SOCK"; then
-	ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock
+# Point the stable symlink at this connection's forwarded agent. Skip when
+# SSH_AUTH_SOCK is already the symlink (that would create a self-loop) or is
+# not a live socket.
+if [ -S "$SSH_AUTH_SOCK" ] && [ "$SSH_AUTH_SOCK" != "$HOME/.ssh/ssh_auth_sock" ]; then
+	ln -sfn "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
 fi
 
 export SSH_AUTH_SOCK=$HOME/.ssh/ssh_auth_sock
